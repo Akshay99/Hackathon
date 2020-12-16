@@ -1,0 +1,25 @@
+{
+    "clients": [
+        {
+            "id": 1,
+            "name": "DVT",
+            "type": "col",
+            "agent": "John",
+            "phone": 9096101957
+        },
+        {
+            "id": 2,
+            "name": "ASDF",
+            "type": "col",
+            "agent": "Kishor",
+            "phone": 7719905456
+        },
+        {
+            "id": 3,
+            "name": "HSBC",
+            "type": "col",
+            "agent": "Sumeet",
+            "phone": 9875878687
+        }
+    ]
+}
