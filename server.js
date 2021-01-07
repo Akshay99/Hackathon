@@ -50,13 +50,13 @@ app.post('/api/sendsms', function (req, res) {
       return res.status(400).json({ success: false, msg: 'No record or customer found' });
     }
     if (error) {
-      return res.status(400).json({ success: false, msg: 'Error occoured in sending Message' });
+      return res.status(400).json({ success: false, msg: 'Error occurred in sending Message' });
     }
     const smsurl = `${smsDomain}/dev/bulk?authorization=${auth}&sender_id=FSTSMS&message=${message}&language=english&route=p&numbers=${contactNo}`;
 
     request(smsurl, function (error, response, body) {
       if (error) {
-        return res.status(400).json({ success: false, msg: 'Error occoured in sending Message' });
+        return res.status(400).json({ success: false, msg: 'Error occurred in sending Message' });
       }
       res.status(200).json({ success: true, msg: 'SMS sent Successfully', info: JSON.parse(body).message });
     });
